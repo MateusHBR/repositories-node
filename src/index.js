@@ -15,7 +15,11 @@ function validateRepository(request, response, next){
     console.log(url);
 
     if(title == null || url == null || techs == null) {
-        return response.status(400).json({"erro": "Invalid data params"});
+        return response.status(400).json({"error": "Invalid data params"});
+    }
+    
+    return next();
+}
     }
     
     return next();
