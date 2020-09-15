@@ -27,7 +27,7 @@ function validadeUuid(request, response, next) {
     if(!isUuid(id)) {
         return response.status(400).json({"error": "Invalid id"});
     }
-    
+
     return next();
 }
 
