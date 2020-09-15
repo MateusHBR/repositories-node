@@ -64,7 +64,7 @@ app.put("/repositories/:id", validadeUuid, (request, response) => {
     const repoIndex = repositories.findIndex(repository => repository.id == id);
 
     if(repoIndex < 0) {
-        return response.json({ "error": "id not found" });
+        return response.status(400).json({ "error": "Id not found" });
     }
 
     var repository = {
