@@ -1,10 +1,10 @@
 {
   "name": "my-repositories",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "nodemon": "nodemon src/index.js"
+    "dev": "nodemon",
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -12,7 +12,7 @@
     "uuidv4": "^6.2.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
   },
   "repository": "https://github.com/MateusHBR/repositories-node.git",
   "author": "MateusHBR <mateusmorais.r@gmail.com>"
