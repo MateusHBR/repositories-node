@@ -57,8 +57,27 @@ app.post("/repositories", validateRepository, (request, response) => {
     return response.json(repository);
 });
 
-app.put("/repositories/:id", (request, response) => {
-    return response.json(repositories);
+app.put("/repositories/:id", validadeUuid, (request, response) => {
+    const { id }  = request.params;
+    const { title, url, techs } = request.body;
+
+    const repoIndex = repositories.findIndex(repository => repository.id == id);
+
+    if(repoIndex < 0) {
+        return response.json({ "error": "id not found" });
+    }
+
+    var repository = {
+        id,
+        title: (title == null) ? repositories[repoIndex].title : title,
+        url: (url == null) ? repositories[repoIndex].url: url,
+        techs: (techs == null) ? repositories[repoIndex].techs : techs,
+        likes: repositories[repoIndex].likes,
+    }   
+    
+    repositories[repoIndex] = repository;
+
+    return response.json(repository);
 });
 
 app.delete("/repositories/:id", (request, response) => {
