@@ -22,7 +22,13 @@ function validateRepository(request, response, next){
 }
 
 app.get("/repositories", (request, response) => {
-    return response.json(repositories);
+    const { title } = request.query;
+
+    const result = title
+    ? repositories.filter(repository => repository.title.includes(title))
+    : repositories;
+
+    return response.json(result);
 });
 
 app.post("/repositories", validateRepository, (request, response) => {
@@ -40,6 +46,7 @@ app.post("/repositories", validateRepository, (request, response) => {
     
     return response.json(repository);
 });
+
 app.put("/repositories/:id", (request, response) => {
     return response.json(repositories);
 });
