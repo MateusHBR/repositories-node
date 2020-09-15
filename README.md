@@ -14,7 +14,8 @@ Utilize os comandos:
 - **`yarn`**
 - **`yarn dev`**
 
-E a aplicação estará rodando no url: [link](http://localhost:3333){:target="_blank"}
+E a aplicação estará rodando no url: <a href="http://localhost:3333" target="_blank">http://localhost:3333</a>
+
 
 
 ##  Sobre o desafio :information_source: <a name="about" />
