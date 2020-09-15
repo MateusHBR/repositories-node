@@ -80,8 +80,20 @@ app.put("/repositories/:id", validadeUuid, (request, response) => {
     return response.json(repository);
 });
 
-app.delete("/repositories/:id", (request, response) => {
-    return response.status();
+app.delete("/repositories/:id", validadeUuid, (request, response) => {
+    const { id } = request.params;
+
+    const repoIndex = repositories.findIndex(repository => repository.id == id);
+
+    if(repoIndex < 0) {
+        return response.status(400).json({ "error": "Id not found" });
+    }
+
+    repositories.splice(repoIndex, 1);
+
+    return response.status(204).send();
+});
+
 });
 
 app.listen(3333, () => {
