@@ -13,5 +13,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": "https://github.com/MateusHBR/repositories-node.git",
+  "author": "MateusHBR <mateusmorais.r@gmail.com>"
 }
