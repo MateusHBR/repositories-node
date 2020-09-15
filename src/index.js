@@ -11,7 +11,12 @@ const repositories = [];
 app.get("/repositories", (request, response) => {
     repositories.push('teste');
 
+app.put("/repositories/:id", (request, response) => {
     return response.json(repositories);
+});
+
+app.delete("/repositories/:id", (request, response) => {
+    return response.status();
 });
 
 app.listen(3333, () => {
