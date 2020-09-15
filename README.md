@@ -10,13 +10,11 @@
 
 ## Executar código :play_or_pause_button:  <a name="exec" />
 
-Utilize os comandos:
+Utilize o comando:
+- **`yarn`**
+- **`yarn dev`**
 
-1. **`yarn add express`**
-2. **`yarn add nodemon -D`**
-3. **`yarn add cors`**
-
-E  por último utilize **`yarn dev`** para inicializar a aplicação.
+E a aplicação estará rodando no url: <a href="http://localhost:3333" target="_blank">http://localhost:3333</ a>.
 
 
 
