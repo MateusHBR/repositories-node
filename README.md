@@ -16,7 +16,7 @@ Utilize os comandos:
 2. **`yarn add nodemon -D`**
 3. **`yarn add cors`**
 
-E  por último utilize **`yarn dev`** para inicializar a aplicação
+E  por último utilize **`yarn dev`** para inicializar a aplicação.
 
 
 
